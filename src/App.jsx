@@ -88,6 +88,18 @@ function App() {
           </select>
         )
       }
+      {
+        genshinState.characters && (
+          <select className="div mt-2" name="characters" id="">
+            <option value="">Seleccione un personaje</option>
+            {genshinState.characters.map((character) => (
+              <option key={character} value={character}>
+                {character}
+              </option>
+            ))}
+          </select>
+        )
+      }
 
     </div>
 
